@@ -32,8 +32,7 @@ WORKDIR /build
 
 COPY ./src/xcompany/hellodocker/build/ /build/
 
-RUN /build/build.sh \
-    rm -rf /build
+RUN /build/build.sh
 
 # ENTRYPOINT ["/usr/bin/xinit"]
 

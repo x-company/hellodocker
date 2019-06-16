@@ -4,8 +4,8 @@
 
 FROM xcompany/xbuild:latest
 
-ARG XBUILD_BUILD_DATE="2019-06-16T09:24:52Z"
-ARG XBUILD_VCS_REF="7d54b51"
+ARG XBUILD_BUILD_DATE="2019-06-16T09:40:36Z"
+ARG XBUILD_VCS_REF="62618f9"
 ARG XBUILD_VERSION="0.1.0"
 ARG XBUILD_IMAGE_NAME="xcompany/hellodocker"
 ARG XBUILD_IMAGE_DESCRIPTION="Your Image Description"
@@ -32,8 +32,7 @@ WORKDIR /build
 
 COPY ./src/xcompany/hellodocker/build/ /build/
 
-RUN /build/build.sh \
-    rm -rf /build
+RUN /build/build.sh
 
 # ENTRYPOINT ["/usr/bin/xinit"]
 

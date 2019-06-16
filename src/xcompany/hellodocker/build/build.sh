@@ -18,7 +18,7 @@ loadvars
 prepare --with-node
 
 header "Build Services ..."
-# build
+build
 
 # Persist Environment Variables
 savevars
