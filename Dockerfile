@@ -4,11 +4,11 @@
 
 FROM xcompany/xbuild:latest
 
-ARG XBUILD_BUILD_DATE="2019-06-16T11:09:23Z"
-ARG XBUILD_VCS_REF="39b54c8"
+ARG XBUILD_BUILD_DATE="2019-06-16T18:51:07Z"
+ARG XBUILD_VCS_REF="8a6f013"
 ARG XBUILD_VERSION="0.1.0"
 ARG XBUILD_IMAGE_NAME="xcompany/hellodocker"
-ARG XBUILD_IMAGE_DESCRIPTION="Your Image Description"
+ARG XBUILD_IMAGE_DESCRIPTION="A Sample Docker Image"
 ARG XBUILD_VENDOR="IT Solutions Roland Breitschaft"
 ARG XBUILD_VENDOR_URL="https://www.x-company.de"
 ARG XBUILD_VENDOR_MAIL="info@x-company.de"
@@ -28,12 +28,15 @@ LABEL  de.x-company.build-date=$XBUILD_BUILD_DATE \
        description=$XBUILD_IMAGE_DESCRIPTION \
        version=$XBUILD_VERSION
 
-WORKDIR /build
+COPY   ./src/xcompany/hellodocker/build/ /build/
 
-COPY ./src/xcompany/hellodocker/build/ /build/
+RUN    /build/build.sh \
+       rm -rf /build/
 
-RUN /build/build.sh
+WORKDIR /
 
-# ENTRYPOINT ["/usr/bin/xinit"]
+SHELL  ["/bin/bash", "-l", "-c"]
+
+ENTRYPOINT ["/usr/bin/xinit"]
 
 HEALTHCHECK --interval=5s --timeout=3s CMD /usr/local/bin/healthcheck.sh || exit 1
