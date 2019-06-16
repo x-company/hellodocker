@@ -37,6 +37,6 @@ WORKDIR /
 
 SHELL  ["/bin/bash", "-l", "-c"]
 
-ENTRYPOINT ["/usr/bin/xinit"]
+ENTRYPOINT ["/usr/bin/xinit", "run"]
 
 HEALTHCHECK --interval=5s --timeout=3s CMD /usr/local/bin/healthcheck.sh || exit 1
