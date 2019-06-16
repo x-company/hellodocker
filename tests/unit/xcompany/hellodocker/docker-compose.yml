@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  hellodocker:
+    image: xcompany/hellodocker:unit
+    build:
+      context: ../../../../.devcontainer
+    volumes:
+      # Map the current Source Folder
+      - ./:/workspace/tests/unit
+    command: "/usr/bin/bats /workspace/tests/unit/"
+

@@ -1,0 +1,5 @@
+# Global Ignores
+Dockerfile
+.dockerignore
+
+# Define your own Ignores which should not be included to your Image
