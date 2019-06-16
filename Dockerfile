@@ -4,8 +4,8 @@
 
 FROM xcompany/xbuild:latest
 
-ARG XBUILD_BUILD_DATE="2019-06-16T06:56:21Z"
-ARG XBUILD_VCS_REF="d2b7e34"
+ARG XBUILD_BUILD_DATE="2019-06-16T07:02:12Z"
+ARG XBUILD_VCS_REF="f762f76"
 ARG XBUILD_VERSION="0.1.0"
 ARG XBUILD_IMAGE_NAME="xcompany/hellodocker"
 ARG XBUILD_IMAGE_DESCRIPTION="Your Image Description"
@@ -34,6 +34,6 @@ COPY ./src/xcompany/hellodocker/build/ /build/
 
 RUN /build/build.sh
 
-ENTRYPOINT ["/usr/bin/xinit"]
+# ENTRYPOINT ["/usr/bin/xinit"]
 
 HEALTHCHECK --interval=5s --timeout=3s CMD /usr/local/bin/healthcheck.sh || exit 1
