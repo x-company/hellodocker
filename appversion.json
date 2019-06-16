@@ -6,9 +6,9 @@
     "badge": "[![hellodocker-version](https://img.shields.io/badge/Version-${M.m.p}-brightgreen.svg?style=flat)](https://github.com/xcompany/hellodocker)"
   },
   "build": {
-    "date": "2019-06-16T07:02:11.660Z",
-    "number": 8,
-    "total": 8,
+    "date": "2019-06-16T09:24:50.913Z",
+    "number": 9,
+    "total": 9,
     "badge": "[![hellodocker-build](https://img.shields.io/badge/Builds-${n}-brightgreen.svg?style=flat)](https://github.com/xcompany/hellodocker)"
   },
   "status": {
