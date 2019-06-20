@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# -*- coding: utf-8 -*-
+
+# Define here the Health Check for your Service
+#
+# POWERTIP: Use Snippet xb-health to create a Sample
+# Hint: Look also for other Snippets with the Prefix 'xb-...'
+

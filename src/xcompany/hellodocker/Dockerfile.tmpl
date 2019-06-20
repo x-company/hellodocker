@@ -8,7 +8,7 @@ ARG XBUILD_BUILD_DATE="__XBUILD_BUILD_DATE__"
 ARG XBUILD_VCS_REF="__XBUILD_VCS_REF__"
 ARG XBUILD_VERSION="__XBUILD_VERSION__"
 ARG XBUILD_IMAGE_NAME="xcompany/hellodocker"
-ARG XBUILD_IMAGE_DESCRIPTION="A Sample Docker Image"
+ARG XBUILD_IMAGE_DESCRIPTION="A Sample Image with xbuild"
 ARG XBUILD_VENDOR="IT Solutions Roland Breitschaft"
 ARG XBUILD_VENDOR_URL="https://www.x-company.de"
 ARG XBUILD_VENDOR_MAIL="info@x-company.de"
@@ -37,6 +37,6 @@ WORKDIR /
 
 SHELL  ["/bin/bash", "-l", "-c"]
 
-ENTRYPOINT ["/usr/bin/xinit", "run"]
+ENTRYPOINT ["/init"]
 
 HEALTHCHECK --interval=5s --timeout=3s CMD /usr/local/bin/healthcheck.sh || exit 1

@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # -*- coding: utf-8 -*-
 
+# This is the main Build File for your Docker Image
+#
+# POWERTIP: Use Snippet xb-build to create a Sample
+# Hint: Look also for other Snippets with the Prefix 'xb-...'
+
+
+
 # Load the xBuild System
 source /usr/local/include/xbuild/loader
 
@@ -9,7 +16,7 @@ loadvars
 
 # POWERTIP: Use the Snippet xb-prepare and xb-prepare-lang to Prepare your Image
 # Prepare the Image. If you want another Packages installed use snippet xb-prepare-lang
-prepare --with-node
+prepare
 
 header "Build Services ..."
 build
