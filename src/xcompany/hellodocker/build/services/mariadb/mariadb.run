@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# -*- coding: utf-8 -*-
-
-# File will called to start your Service
-#
-# POWERTIP: Use Snippet xb-service-run to create a Sample
-# Hint: Look also for other Snippets with the Prefix 'xb-...'
-
