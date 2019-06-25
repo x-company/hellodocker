@@ -2,13 +2,13 @@
   "version": {
     "major": 0,
     "minor": 1,
-    "patch": 2,
+    "patch": 3,
     "badge": "[![hellodocker-version](https://img.shields.io/badge/Version-${M.m.p}-brightgreen.svg?style=flat)](https://github.com/xcompany/hellodocker)"
   },
   "build": {
-    "date": "2019-06-25T22:07:57.341Z",
+    "date": "2019-06-25T23:11:21.970Z",
     "number": 1,
-    "total": 5,
+    "total": 6,
     "badge": "[![hellodocker-build](https://img.shields.io/badge/Builds-${n}-brightgreen.svg?style=flat)](https://github.com/xcompany/hellodocker)"
   },
   "status": {
