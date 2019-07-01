@@ -3,6 +3,6 @@
 background {
     s6-setuidgid daemon
 
-    fsmove -c 2 1
+    # fsmove -c 2 1
     /usr/sbin/cron -f
 }
