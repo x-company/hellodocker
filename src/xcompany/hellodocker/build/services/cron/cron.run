@@ -1,5 +1,12 @@
 #!/usr/bin/execlineb -P
 
+if { s6-mkdir -p /var/spool/cron/crontabs/ }
+if { s6-mkdir -p /ect/cron.d/ }
+if { s6-mkdir -p /ect/cron.daily/ }
+if { s6-mkdir -p /ect/cron.hourly/ }
+if { s6-mkdir -p /ect/cron.monthly/ }
+if { s6-mkdir -p /ect/cron.weekly/ }
+
 # Touch cron files to fix 'NUMBER OF HARD LINKS > 1' issue. See  https://github.com/phusion/baseimage-docker/issues/198
 if { s6-touch -c /var/spool/cron/crontabs/* }
 if { s6-touch -c /etc/crontab }
