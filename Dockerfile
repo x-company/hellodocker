@@ -4,11 +4,11 @@
 
 FROM xcompany/xbuild:latest
 
-ARG XBUILD_BUILD_DATE="2019-06-26T00:12:11Z"
-ARG XBUILD_VCS_REF="20fa4a5"
+ARG XBUILD_BUILD_DATE="2019-07-01T06:10:58Z"
+ARG XBUILD_VCS_REF="5024070"
 ARG XBUILD_VERSION="0.1.4"
 ARG XBUILD_IMAGE_NAME="xcompany/hellodocker"
-ARG XBUILD_IMAGE_DESCRIPTION="A Sample Image with xbuild in it"
+ARG XBUILD_IMAGE_DESCRIPTION="A Image to test xbuild"
 ARG XBUILD_VENDOR="IT Solutions Roland Breitschaft"
 ARG XBUILD_VENDOR_URL="https://www.x-company.de"
 ARG XBUILD_VENDOR_MAIL="info@x-company.de"
@@ -37,5 +37,3 @@ RUN    xb-build
 WORKDIR /
 
 ENTRYPOINT ["/init"]
-
-HEALTHCHECK --interval=5s --timeout=3s CMD /usr/local/bin/xb-healthcheck || exit 1

@@ -1,9 +1,0 @@
-#!/usr/bin/execlineb -P
-
-# Execute here global Build Steps for Example ...
-# - Create new User
-# - Create global Files and Folders
-# - Install global Tools
-# - Do hardening Things
-# - ...
-

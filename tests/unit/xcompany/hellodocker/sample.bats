@@ -1,6 +1,8 @@
 #!/usr/bin/env bats
 # -*- coding: utf-8 -*-
 
+load init
+
 @test "addition using bc" {
     # Arrange
 

@@ -22,3 +22,4 @@ For Windows you have to use Visual Studio Code with the suggested Extensions. To
 - Visual Studio Code v1.34 to use the Dev Container and Code Snippets
 
 After you have installed this Tools open Visual Studio Code and install all recommended Extensions. Please notice also our [Contributing](CONTRIBUTING.md). Thanks.
+

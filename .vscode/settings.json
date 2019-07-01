@@ -204,8 +204,5 @@
     "[powershell]": {
         "files.encoding": "utf8",
         "files.autoGuessEncoding": false
-    },
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#4b3fd4"
     }
 }

@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  build:
+    image: xcompany/hellodocker:test
+    build:
+      context: ..
+      dockerfile: Dockerfile
+
+  test:
+    image: xcompany/hellodocker:test
+    depends_on:
+      - build
+    volumes:
+      - ../tests/unit/:/tests/
+      - ./sources.list:/build/sources.list
+      - ./xbuild.conf:/build/xbuild.conf
+    command: /usr/local/bin/xb-test

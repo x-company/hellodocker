@@ -1,0 +1,15 @@
+#!/usr/bin/execlineb -P
+
+# Install here your Service for example we show how to install mariadb
+if { xb-install cron }
+
+if { xb-log "Configure Service 'cron'" }
+if { sed -i "s/^\s*session\s\+required\s\+pam_loginuid.so/# &/" /etc/pam.d/cron }
+
+## Remove useless cron entries.
+# Checks for lost+found and scans for mtab.
+if { s6-rmrf /etc/cron.daily/standard }
+if { s6-rmrf /etc/cron.daily/upstart }
+if { s6-rmrf /etc/cron.daily/dpkg }
+if { s6-rmrf /etc/cron.daily/password }
+if { s6-rmrf /etc/cron.weekly/fstrim }
