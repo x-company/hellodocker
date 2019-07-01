@@ -4,5 +4,5 @@ background {
     s6-setuidgid root
 
     # fsmove -c 2 1
-    /usr/sbin/cron -f
+    if { /usr/sbin/cron -f }
 }
