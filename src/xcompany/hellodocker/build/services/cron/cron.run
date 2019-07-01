@@ -1,8 +1,4 @@
 #!/usr/bin/execlineb -P
 
-background {
-    s6-setuidgid root
-
-    # fsmove -c 2 1
-    if { /usr/sbin/cron -f }
-}
+s6-setuidgid root
+/usr/sbin/cron -f

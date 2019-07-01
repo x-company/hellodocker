@@ -1,8 +1,5 @@
 #!/usr/bin/execlineb -P
 
-# Install the Service cron
-if { xb-install cron }
-
 if { xb-log "Configure Service 'cron'" }
 if { sed -i "s/^\s*session\s\+required\s\+pam_loginuid.so/# &/" /etc/pam.d/cron }
 
