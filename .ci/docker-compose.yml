@@ -1,8 +1,13 @@
 version: "3.7"
-
 services:
+  build:
+    image: xcompany/hellodocker:test
+    build:
+      context: ..
+      dockerfile: Dockerfile
+
   test:
-    image: xcompany/hellodocker:devcontainer
+    image: xcompany/hellodocker:test
     depends_on:
       - build
     volumes:
