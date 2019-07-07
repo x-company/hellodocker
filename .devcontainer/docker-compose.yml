@@ -2,4 +2,6 @@ version: "3.7"
 services:
   build:
     image: xcompany/hellodocker:devcontainer
-    build: Dockerfile
+    build:
+      context: ..
+      dockerfile: Dockerfile.dev

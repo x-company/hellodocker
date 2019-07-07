@@ -1,0 +1,14 @@
+FROM xcompany/xbuild:latest
+
+COPY   ./src/xcompany/hellodocker/build/ /build/
+
+COPY   ./src/xcompany/hellodocker/rootfs/ /
+
+COPY    ./.devcontainer/xbuild.conf /build/xbuild.conf
+
+COPY    ./.devcontainer/sources.list /build/sources.list
+
+RUN    xb-build
+
+WORKDIR /
+
